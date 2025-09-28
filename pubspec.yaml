@@ -43,6 +43,8 @@ dependencies:
   flutter_native_splash: ^2.4.6
   google_fonts: ^6.3.2
   shared_preferences: ^2.5.3
+  flutter_screenutil: ^5.9.3
+  introduction_screen: ^4.0.0
 
 dev_dependencies:
   flutter_test:

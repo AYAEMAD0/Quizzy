@@ -7,13 +7,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:quizzy/main.dart';
+import 'package:quizzy/core/routing/app_router.dart';
+import 'package:quizzy/quizzy.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    // Mock SharedPreferences
+    SharedPreferences.setMockInitialValues({'showOnBoarding': false});
+
+    // Build our app and trigger a frame
+    await tester.pumpWidget(Quizzy(appRouter: AppRouter(), showOnBoarding: false));
+
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
