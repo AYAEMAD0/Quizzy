@@ -19,7 +19,7 @@ class CustomSnackBar extends StatelessWidget {
       ),
       child: Text(
         AppStrings.pleaseSelectAllOptions,
-        style: TextStyles.font20WhiteBold,
+        style: TextStyles.font16WhiteBold,
       ),
     );
   }
