@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:quizzy/features/onboarding/presentation/cubit/onboarding_cubit.dart';
+
 import '../../../../core/constants/app_strings.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -26,7 +27,6 @@ class OnboardingView extends StatelessWidget {
           builder: (context) {
             final cubit = context.read<OnboardingCubit>();
             return Scaffold(
-              backgroundColor: AppColors.primary,
               body: SafeArea(
                 child: Padding(
                   padding: EdgeInsets.symmetric(

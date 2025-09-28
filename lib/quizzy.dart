@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quizzy/core/routing/app_router.dart';
+import 'package:quizzy/core/theme/app_theme.dart';
+
 import 'core/routing/routes.dart';
 
 class Quizzy extends StatelessWidget {
@@ -17,6 +19,7 @@ class Quizzy extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
+          theme: AppTheme.theme,
           initialRoute: showOnBoarding? Routes.loginRouteName: Routes.onboardingRouteName,
           onGenerateRoute: appRouter.generateRoute,
         );
