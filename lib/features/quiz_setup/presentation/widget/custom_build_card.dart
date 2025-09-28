@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quizzy/core/theme/app_colors.dart';
 
 class CustomBuildCard extends StatelessWidget {
   final Widget child;
@@ -10,7 +11,7 @@ class CustomBuildCard extends StatelessWidget {
     return Container(
       padding:  EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.colorWhiteBlue,
         borderRadius: BorderRadius.circular(16.r),
         boxShadow: [
           BoxShadow(
