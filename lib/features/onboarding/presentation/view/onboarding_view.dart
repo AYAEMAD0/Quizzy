@@ -16,44 +16,53 @@ class OnboardingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => OnboardingCubit(),
-      child: Builder(
-        builder: (context) {
-          final cubit = context.read<OnboardingCubit>();
-          return Scaffold(
-            backgroundColor: AppColors.primary,
-            body: SafeArea(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 13.h),
-                child: IntroductionScreen(
-                  globalBackgroundColor: AppColors.primary,
-                  pages: OnboardingPages.pages,
-                  dotsDecorator: DotsDecorator(
-                    color: AppColors.indicatorUnactive,
-                    activeColor: AppColors.indicatorActive,
-                    activeSize: Size(25.w, 8.h),
-                    size: Size(10.w, 10.h),
-                    activeShape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100.sp),
+      child: BlocListener<OnboardingCubit, bool>(
+        listener: (context, state) {
+          if (state) {
+            Navigator.pushReplacementNamed(context, Routes.loginRouteName);
+          }
+        },
+        child: Builder(
+          builder: (context) {
+            final cubit = context.read<OnboardingCubit>();
+            return Scaffold(
+              backgroundColor: AppColors.primary,
+              body: SafeArea(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10.w,
+                    vertical: 13.h,
+                  ),
+                  child: IntroductionScreen(
+                    globalBackgroundColor: AppColors.primary,
+                    pages: OnboardingPages.pages,
+                    dotsDecorator: DotsDecorator(
+                      color: AppColors.indicatorUnactive,
+                      activeColor: AppColors.indicatorActive,
+                      activeSize: Size(25.w, 8.h),
+                      size: Size(10.w, 10.h),
+                      activeShape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(100.sp),
+                      ),
                     ),
+                    showBackButton: true,
+                    showNextButton: true,
+                    showDoneButton: true,
+                    next: BuiltButton(text: AppStrings.next),
+                    back: BuiltButton(
+                      text: AppStrings.back,
+                      alignment: Alignment.bottomLeft,
+                    ),
+                    done: BuiltButton(text: AppStrings.finish),
+                    onDone: () async {
+                      await cubit.completeOnboarding();
+                    },
                   ),
-                  showBackButton: true,
-                  showNextButton: true,
-                  showDoneButton: true,
-                  next: BuiltButton(text: AppStrings.next),
-                  back: BuiltButton(
-                    text: AppStrings.back,
-                    alignment: Alignment.bottomLeft,
-                  ),
-                  done: BuiltButton(text: AppStrings.finish),
-                  onDone: () async {
-                    await cubit.completeOnboarding();
-                    Navigator.pushReplacementNamed(context, Routes.loginRouteName);
-                  },
                 ),
               ),
-            ),
-          );
-        }
+            );
+          },
+        ),
       ),
     );
   }
