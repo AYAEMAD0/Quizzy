@@ -8,7 +8,12 @@ import 'core/routing/routes.dart';
 class Quizzy extends StatelessWidget {
   final AppRouter appRouter;
   final bool showOnBoarding;
-  const Quizzy({super.key, required this.appRouter, required this.showOnBoarding});
+
+  const Quizzy({
+    super.key,
+    required this.appRouter,
+    required this.showOnBoarding,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +25,9 @@ class Quizzy extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: AppTheme.theme,
-          initialRoute: showOnBoarding? Routes.loginRouteName: Routes.onboardingRouteName,
+          initialRoute: showOnBoarding
+              ? Routes.loginRouteName
+              : Routes.onboardingRouteName,
           onGenerateRoute: appRouter.generateRoute,
         );
       },
