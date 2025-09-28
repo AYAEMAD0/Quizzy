@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import 'app_colors.dart';
 import 'font_weight_helper.dart';
 
@@ -27,7 +28,18 @@ class TextStyles {
   );
   static TextStyle font14WhiteBlueBold = GoogleFonts.montserrat(
     color: AppColors.colorWhiteBlue,
-    fontSize: 14,
+    fontSize: 14.sp,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle font28WhiteBlueBold = GoogleFonts.montserrat(
+    color: AppColors.colorWhiteBlue,
+    fontSize: 28.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle font16WhiteBold = GoogleFonts.montserrat(
+    color: AppColors.colorWhiteBlue,
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.medium,
+  );
+
 }
