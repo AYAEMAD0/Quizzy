@@ -26,6 +26,14 @@ class AppStrings {
   static const String storeName = "name";
 
 
+  //quiz setup
+  static const String setupQuiz = "🎯 Setup Your Quiz";
+  static const String selectCategory = "📂 Select Category";
+  static const String selectDifficulty = "⚡ Select Difficulty";
+  static const String selectNumberOfQuestions = "📝 Number of Questions";
+  static const String startQuiz = "🚀 Start Quiz";
+  static const String pleaseSelectAllOptions = "⚠️  Please select all options first";
+
 
 
 
