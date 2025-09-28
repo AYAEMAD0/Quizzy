@@ -6,9 +6,8 @@ import 'package:quizzy/core/helper/validator.dart';
 import 'package:quizzy/core/routing/routes.dart';
 import 'package:quizzy/core/widgets/custom_text_field.dart';
 import 'package:quizzy/features/auth/presentation/cubit/login_cubit.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
 import '../../../../core/constants/app_strings.dart';
-import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/custom_button.dart';
 
 class LoginView extends StatefulWidget {
@@ -44,7 +43,6 @@ class _LoginViewState extends State<LoginView> {
             return GestureDetector(
               onTap: FocusScope.of(context).unfocus,
               child: Scaffold(
-                backgroundColor: AppColors.primary,
                 body: SafeArea(
                   child: Padding(
                     padding: EdgeInsets.symmetric(
