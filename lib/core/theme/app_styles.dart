@@ -27,7 +27,18 @@ class TextStyles {
   );
   static TextStyle font14WhiteBlueBold = GoogleFonts.montserrat(
     color: AppColors.colorWhiteBlue,
-    fontSize: 14,
+    fontSize: 14.sp,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle font28WhiteBlueBold = GoogleFonts.montserrat(
+    color: AppColors.colorWhiteBlue,
+    fontSize: 28.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle font20WhiteBold = GoogleFonts.montserrat(
+    color: AppColors.colorWhiteBlue,
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
+
 }
