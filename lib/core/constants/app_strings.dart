@@ -22,7 +22,7 @@ class AppStrings {
   static const String name ="Name";
   static const String nameRequired ="Name is required";
   static const String nameInvalid ="Invalid Name";
-  static const String login = "Login";
+  static const String login = 'Are You Ready 🔥';
   static const String storeName = "name";
 
 
