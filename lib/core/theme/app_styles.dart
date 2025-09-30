@@ -61,19 +61,4 @@ class TextStyles {
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.bold,
   );
-  static TextStyle font26NaturalBold = GoogleFonts.montserrat(
-    color: AppColors.natural,
-    fontSize: 26.sp,
-    fontWeight: FontWeightHelper.bold,
-  );
-  static TextStyle font30GreenBold = GoogleFonts.montserrat(
-    color: AppColors.correct,
-    fontSize: 30.sp,
-    fontWeight: FontWeightHelper.bold,
-  );
-  static TextStyle font25GreenBold = GoogleFonts.montserrat(
-    color: AppColors.correct,
-    fontSize: 25.sp,
-    fontWeight: FontWeightHelper.bold,
-  );
 }

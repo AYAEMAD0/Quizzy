@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:html_unescape/html_unescape.dart';
 import 'package:quizzy/core/constants/app_strings.dart';
-import 'package:quizzy/core/routing/routes.dart';
 import 'package:quizzy/features/quiz_play/presentation/widget/answer_widget.dart';
 import 'package:quizzy/features/quiz_play/presentation/widget/progress_bar.dart';
 import 'package:quizzy/features/quiz_play/presentation/widget/question_widget.dart';
@@ -52,22 +51,28 @@ class QuizPlayView extends StatelessWidget {
               );
             }
             if (state.completed) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                Navigator.pushReplacementNamed(
-                  context,
-                  Routes.quizResultRouteName,
-                  arguments: {
-                    'score': state.score,
-                    'totalQuestions': state.questions.length,
-                  },
-                );
-              });
-              return const SizedBox.shrink();
+              return Center(
+                child: Column(
+                  spacing: 5.h,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('finished', style: TextStyle(fontSize: 50)),
+                    Text(
+                      'score: ${state.score}',
+                      style: TextStyle(fontSize: 40),
+                    ),
+                    Text(
+                      'totalQuestions: ${state.questions.length}',
+                      style: TextStyle(fontSize: 40),
+                    ),
+                  ],
+                ),
+              );
             }
             final progress = (state.currentIndex + 1) / state.questions.length;
             final q = state.current!;
             return Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+              padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [

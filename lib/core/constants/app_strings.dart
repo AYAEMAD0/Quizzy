@@ -44,11 +44,4 @@ class AppStrings {
   static const String serverError = "Server Error";
   static const String internetError = "No Internet Connection";
   static const String parsingError = "Unexpected parsing error";
-
-  //quiz result
-  static const String score = "your score is";
-  static const String correctAnswers = "Correct Answers";
-  static const String wrongAnswers = "Wrong Answers";
-  static const String tryAgain = "Try Again";
-  static const String newPlayer = "New Player";
 }
