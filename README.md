@@ -93,14 +93,6 @@ integrates with an external **API** for quiz questions.
 ## 🔄 App Flow Diagram
 
 ![App Flow Diagram](assets/screenshots/appFlow.png)
-flowchart TD
-    A[Onboarding (first launch only)] -->|Next| B[Login]
-    B -->|Enter name| C[Quiz Setup]
-    C -->|Start Quiz| D[Quiz Play]
-    D -->|Finish| E[Quiz Result]
-    E -->|Try Again| C
-    E -->|New Player| B
-
 
 ---
 
