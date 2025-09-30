@@ -10,6 +10,7 @@ class AppTheme {
       iconTheme: IconThemeData(color: AppColors.colorWhite),
       scrolledUnderElevation: 0,
       elevation: 0,
+      centerTitle: true,
     ),
   );
 }

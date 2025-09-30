@@ -4,9 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quizzy/core/constants/app_strings.dart';
 import 'package:quizzy/features/quiz_setup/presentation/constants/quiz_setup_constants.dart';
 import 'package:quizzy/features/quiz_setup/presentation/cubit/quiz_setup_cubit.dart';
+
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theme/app_styles.dart';
 import '../../../../core/widgets/custom_button.dart';
+import '../../data/models/quiz_setup_model.dart';
 import '../widget/custom_drop_down.dart';
 import '../widget/custom_snackbar.dart';
 
@@ -79,8 +81,13 @@ class QuizSetupView extends StatelessWidget {
                     CustomButton(
                       text: AppStrings.startQuiz,
                       onPressed: () {
-                        final settings = cubit.getSetup();
-                        if (settings != null) {
+                        final setup = cubit.getSetup();
+                        if (setup != null) {
+                          final settings = QuizSetupModel(
+                            numberOfQuestions: setup.numberOfQuestions,
+                            category: setup.category,
+                            difficulty: setup.difficulty,
+                          );
                           Navigator.pushReplacementNamed(
                             context,
                             Routes.quizPlayRouteName,
