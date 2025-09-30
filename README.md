@@ -92,7 +92,8 @@ integrates with an external **API** for quiz questions.
 
 ## 🔄 App Flow Diagram
 
-```mermaid
+![App Flow Diagram](assets/screenshots/appFlow.png)
+
 flowchart TD
     A[Onboarding (first launch only)] -->|Next| B[Login]
     B -->|Enter name| C[Quiz Setup]
