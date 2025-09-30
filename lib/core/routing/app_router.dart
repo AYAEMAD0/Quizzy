@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quizzy/features/auth/presentation/view/login_view.dart';
 import 'package:quizzy/features/quiz_play/presentation/view/quiz_play_view.dart';
+import 'package:quizzy/features/quiz_result/presentation/view/quiz_result_view.dart';
 import 'package:quizzy/features/quiz_setup/presentation/view/quiz_setup_view.dart';
 
 import '../../features/onboarding/presentation/view/onboarding_view.dart';
@@ -20,6 +21,15 @@ class AppRouter {
         final args = settings.arguments as QuizSetupModel;
         return MaterialPageRoute(
           builder: (_) => QuizPlayView(settings: args),
+        );
+      case Routes.quizResultRouteName:
+        final args = settings.arguments as Map<String, dynamic>;
+        return MaterialPageRoute(
+          builder: (_) =>
+              QuizResultView(
+                score: args['score'],
+                totalQuestions: args['totalQuestions'],
+              ),
         );
       default:
         return MaterialPageRoute(
