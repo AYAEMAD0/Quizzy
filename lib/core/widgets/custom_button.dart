@@ -10,8 +10,10 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
+    this.padding,
   });
 
+  final EdgeInsetsGeometry? padding;
   final String text;
   final void Function() onPressed;
 
@@ -22,7 +24,7 @@ class CustomButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.colorWhiteBlue,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.sp)),
-        padding: const EdgeInsets.symmetric(vertical: 15),
+        padding: padding ?? EdgeInsets.symmetric(vertical: 15.h),
       ),
       child: Text(text,style: TextStyles.font22PrimarySemiBold,)
     );
