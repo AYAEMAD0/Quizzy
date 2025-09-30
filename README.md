@@ -161,6 +161,6 @@ flowchart TD
 Developed by **Aya Emad**
 
 * [GitHub](https://github.com/AYAEMAD0)
-* [LinkedIn](https://linkedin.com/in/your-profile)
+* [LinkedIn](https://www.linkedin.com/in/aya-emad1/)
 
 ---
