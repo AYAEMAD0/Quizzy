@@ -36,10 +36,29 @@ class TextStyles {
     fontSize: 28.sp,
     fontWeight: FontWeightHelper.bold,
   );
-  static TextStyle font16WhiteBold = GoogleFonts.montserrat(
+  static TextStyle font16WhiteMedium = GoogleFonts.montserrat(
     color: AppColors.colorWhiteBlue,
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
   );
-
+  static TextStyle font24NaturalBold = GoogleFonts.montserrat(
+    color: AppColors.natural,
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle font24RedExtraBold = GoogleFonts.montserrat(
+    color: AppColors.incorrect,
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.extraBold,
+  );
+  static TextStyle font18NaturalBold = GoogleFonts.montserrat(
+    color: AppColors.natural,
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle font20BlackBold = GoogleFonts.montserrat(
+    color: AppColors.colorBlack,
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+  );
 }

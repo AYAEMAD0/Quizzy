@@ -34,13 +34,14 @@ class AppStrings {
   static const String startQuiz = "🚀 Start Quiz";
   static const String pleaseSelectAllOptions = "⚠️  Please select all options first";
 
+  //quiz play
+  static const String quiz = "Quiz";
+  static const String question = "Question";
+  static const String time = "Time :";
+  static const String sec = "sec ";
 
-
-
-
-
-
-
-
-
+  //error
+  static const String serverError = "Server Error";
+  static const String internetError = "No Internet Connection";
+  static const String parsingError = "Unexpected parsing error";
 }
