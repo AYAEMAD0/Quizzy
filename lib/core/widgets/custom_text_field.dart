@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../theme/app_colors.dart';
 import '../theme/app_styles.dart';
 
@@ -43,8 +44,8 @@ class CustomTextField extends StatelessWidget {
         contentPadding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 18.h),
         prefixIcon: prefixIconName,
         suffixIcon: suffixIconName,
-        prefixIconColor: AppColors.iconTextFieldColor,
-        suffixIconColor: AppColors.iconTextFieldColor,
+        prefixIconColor: AppColors.primary,
+        suffixIconColor: AppColors.primary,
         enabledBorder: builtBorder(AppColors.primary),
         focusedBorder: builtBorder(AppColors.primary),
         errorBorder: builtBorder(AppColors.incorrect),

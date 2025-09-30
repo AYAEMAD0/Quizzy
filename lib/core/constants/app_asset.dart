@@ -1,8 +1,11 @@
 class AppAsset{
   //onboarding
   static const onBoardingOne='assets/images/pngs/onBoardingOne.png';
-  static const onBoardingTwo='assets/images/jpgs/onBoardingTwo.png';
-  static const onBoardingThree='assets/images/jpgs/onBoardingThree.png';
+  static const onBoardingTwo = 'assets/images/pngs/onBoardingTwo.png';
+  static const onBoardingThree = 'assets/images/pngs/onBoardingThree.png';
+
+  //login
+  static const ready = 'assets/images/pngs/ready.png';
 
   //score
   static const sadBoy='assets/images/animations/sadBoy.json';

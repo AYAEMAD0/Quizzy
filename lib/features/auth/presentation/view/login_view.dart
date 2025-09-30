@@ -53,8 +53,8 @@ class _LoginViewState extends State<LoginView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Image.asset(AppAsset.onBoardingTwo),
-                            SizedBox(height: 9.h),
+                            Image.asset(AppAsset.ready),
+                            SizedBox(height: 15.h),
                             CustomTextField(
                               hint: AppStrings.name,
                               controller: nameController,
